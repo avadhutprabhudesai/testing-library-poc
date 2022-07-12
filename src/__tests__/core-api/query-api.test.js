@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import { getDOM } from '../../queries/query-api';
 
-describe('Testing Query APIs', () => {
+describe('Query APIs', () => {
   describe('Testing ByRole', () => {
     beforeEach(() => {
       getDOM();
