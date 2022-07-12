@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'jest-dom'],
+  plugins: ['react', 'jest-dom', 'testing-library'],
   rules: {
     'react/react-in-jsx-scope': 'off',
   },
@@ -50,6 +50,10 @@ module.exports = {
           },
         },
       },
+    },
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/dom'],
     },
   ],
 };
